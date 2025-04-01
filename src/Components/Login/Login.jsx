@@ -70,11 +70,11 @@ const Login = () => {
 
         try {
             if (isSignup) {
-                const res = await axios.post("https://digi-be.onrender.com/api/users/signup", formData);
+                const res = await axios.post("https://digi-be.onrender.com/api/signup", formData);
                 toast.success(res.data.message);
                 setIsSignup(false);
             } else {
-                const res = await axios.post("https://digi-be.onrender.com/api/users/login", formData);
+                const res = await axios.post("https://digi-be.onrender.com/api/login", formData);
                 toast.success(res.data.message);
                 localStorage.setItem("token", res.data.token);
                 localStorage.setItem("currentUser", JSON.stringify(res.data.user));
@@ -88,7 +88,7 @@ const Login = () => {
 
     const handleGuestLogin = async () => {
         try {
-            const res = await axios.post("https://digi-be.onrender.com/api/users/guest-login");
+            const res = await axios.post("https://digi-be.onrender.com/api/guest-login");
             toast.success(res.data.message);
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("currentUser", JSON.stringify(res.data.user));
