@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Resume.css";
 import ResumeTemplate1 from "./ResumeTemplate1";
-import ResumeTemplate2 from "./ResumeTemplate2";
+// import ResumeTemplate2 from "./ResumeTemplate2";
 import ResumeDownload from "./ResDownload";
 
 const Resume = () => {

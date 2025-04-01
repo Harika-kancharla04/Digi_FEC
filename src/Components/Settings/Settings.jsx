@@ -33,7 +33,7 @@ const Settings = () => {
           return;
         }
 
-        const response = await fetch('http://localhost:3000/api/current-user', {
+        const response = await fetch('https://digi-be.onrender.com/api/current-user', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -165,7 +165,7 @@ const Settings = () => {
         updateData.newPassword = settings.Account.newPassword;
       }
 
-      const response = await fetch('http://localhost:3000/api/user/update', {
+      const response = await fetch('https://digi-be.onrender.com/api/user/update', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -195,7 +195,7 @@ const Settings = () => {
     try {
       const token = localStorage.getItem('token');
       
-      const response = await fetch('http://localhost:3000/api/user/delete', {
+      const response = await fetch('https://digi-be.onrender.com/api/user/delete', {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

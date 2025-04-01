@@ -17,7 +17,7 @@ const Home = () => {
                 const userId = localStorage.getItem('userId');
                 
                 if (userId) {
-                    const response = await fetch(`http://localhost:3000/api/user/${userId}`, {
+                    const response = await fetch(`https://digi-be.onrender.com/api/user/${userId}`, {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem('token')}`,
                         }
@@ -39,7 +39,7 @@ const Home = () => {
                         setProfile({ name: 'Your Name' });
                     }
                 } else {
-                    const response = await fetch('http://localhost:3000/api/user');
+                    const response = await fetch('https://digi-be.onrender.com/api/user');
                     if (response.ok) {
                         const users = await response.json();
                         if (users.length > 0) {

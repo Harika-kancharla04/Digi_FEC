@@ -55,7 +55,7 @@ const ResumeTemplate1 = () => {
       }
 
       try {
-        const response = await fetch(`http://localhost:3000/api/user/${userId}`, {
+        const response = await fetch(`https://digi-be.onrender.com/api/user/${userId}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         const data = await response.json();

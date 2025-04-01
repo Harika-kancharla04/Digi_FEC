@@ -37,7 +37,7 @@ const Profile = () => {
           return;
         }
   
-        const response = await fetch(`http://localhost:3000/api/user/${userId}`, {
+        const response = await fetch(`https://digi-be.onrender.com/api/user/${userId}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -64,7 +64,7 @@ const Profile = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/api/user/${profile._id}`, {
+      const response = await fetch(`https://digi-be.onrender.com/api/user/${profile._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
