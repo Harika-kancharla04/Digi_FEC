@@ -1,0 +1,108 @@
+/* Professional Resume Styles - Combined File */
+
+/* Common styles for both templates */
+.resume-template {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    color: #333333;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+  
+  .resume-template h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1f497d;
+  }
+  
+  .resume-template h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    color: #1f497d;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 5px;
+  }
+  
+  .resume-template p {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .resume-template strong {
+    font-weight: 600;
+    color: #2e2e2e;
+  }
+  
+  .resume-template div > div {
+    margin-bottom: 15px;
+  }
+  
+  /* Template 1 Specific Styles */
+  .resume-template:not(.template-2) > p {
+    text-align: center;
+    color: #555555;
+    margin-bottom: 25px;
+  }
+  
+  /* Template 2 Specific Styles */
+  .resume-header {
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 2px solid #1f497d;
+    margin-bottom: 25px;
+  }
+  
+  .resume-content {
+    display: flex;
+    gap: 30px;
+    padding: 0 15px;
+  }
+  
+  .left-column {
+    flex: 3;
+    padding-right: 20px;
+    border-right: 1px solid #e6e6e6;
+  }
+  
+  .right-column {
+    flex: 2;
+  }
+  
+  /* Print styles */
+  @media print {
+    .resume-template {
+      padding: 0;
+      font-size: 12pt;
+    }
+    
+    .resume-template h1 {
+      font-size: 16pt;
+    }
+    
+    .resume-template h2 {
+      font-size: 14pt;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .resume-content {
+      flex-direction: column;
+    }
+    
+    .left-column {
+      border-right: none;
+      border-bottom: 1px solid #e6e6e6;
+      padding-right: 0;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .right-column {
+      padding-left: 0;
+    }
+  }

@@ -1,0 +1,147 @@
+* {
+    list-style-type: none;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #111827;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+.active {
+    background: #1f2937;
+    font-weight: bold;
+}
+
+.icon {
+    font-size: 22px;
+}
+
+.logout {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.logout-mobile {
+    display: none;
+}
+
+.logout button{
+    color: black;
+}
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+    }
+
+    .sidebar-header {
+        margin-bottom: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .sidebar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    .sidebar-links.show {
+        display: flex;
+    }
+
+    .logout {
+        display: none;
+    }
+    .logout button{
+        color: black;
+    }
+    .logout-mobile {
+        display: block;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin-top: 10px;
+        color: black;
+    }
+
+    .sidebar.open {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+
+@media screen and (max-width:425px){
+    .logout-mobile button{
+        color: black;
+    }
+    .logout-mobile button:hover{
+        color: white;
+    }
+}

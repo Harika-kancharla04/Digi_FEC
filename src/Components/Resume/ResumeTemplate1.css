@@ -1,0 +1,75 @@
+.resume-wrapper {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 20mm 25mm;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  font-size: 14px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  width: 100%;
+  text-align: left;
+}
+
+section {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+ul li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: #003366;
+  text-decoration: none;
+}
+
+
+
+@media (max-width:768px) {
+  .resume-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    /* or 1200px, based on your preference */
+    padding: 40px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+
+}

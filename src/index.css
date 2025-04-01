@@ -1,0 +1,60 @@
+:root {
+  /* Light theme variables */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #1a1a1a;
+  --text-secondary: #667085;
+  --border-color: #eaeaea;
+  --accent-color: #0066ff;
+  --accent-hover: #0052cc;
+  --success-color: #22c55e;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  
+  /* Common variables */
+  --border-radius: 8px;
+  --transition-speed: 0.2s;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2d2d2d;
+  --text-primary: #f5f5f5;
+  --text-secondary: #a0a0a0;
+  --border-color: #333;
+  --accent-color: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --success-color: #4ade80;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Apply theme variables to global elements */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+a {
+  color: var(--accent-color);
+  transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Utility classes for theme-aware styling */
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-tertiary { background-color: var(--bg-tertiary); }
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.border-color { border-color: var(--border-color); }
+.accent-color { color: var(--accent-color); }
+.bg-accent { background-color: var(--accent-color); }
