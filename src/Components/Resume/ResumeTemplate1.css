@@ -1,6 +1,4 @@
 .resume-wrapper {
-  width: 210mm;
-  min-height: 297mm;
   padding: 20mm 25mm;
   background-color: #ffffff;
   color: #000000;
@@ -57,7 +55,6 @@ a {
 @media (max-width:768px) {
   .resume-wrapper {
     width: 100%;
-    max-width: 1000px;
     /* or 1200px, based on your preference */
     padding: 40px;
     background-color: #ffffff;

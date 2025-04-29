@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import "./ResDownload.css"
 import html2pdf from "html2pdf.js";
 import ResumeTemplate1 from "./ResumeTemplate1";
 import ResumeTemplate2 from "./ResumeTemplate2";
@@ -24,20 +25,14 @@ const ResumeDownload = ({ selectedTemplate }) => {
   
 
   return (
-    <div>
-      <button className="download-btn" onClick={handleDownload} style={{border:"none",padding:"10px",borderRadius:"5px",backgroundColor:"#4a90e2",color:"white",cursor:"pointer"}}>
+    <div   className="resume-wrapper">
+      <button  onClick={handleDownload} style={{border:"none",padding:"10px",borderRadius:"5px",backgroundColor:"#4a90e2",color:"white",cursor:"pointer",justifyContent:"center"}}>
         Download Resume
       </button>
       <div
         ref={resumeRef}
-        className="resume-wrapper"
-        style={{
-          width: "210mm", 
-          minHeight: "297mm",
-          padding: "20mm",
-          background: "#fff",
-          color: "#000",
-        }}
+      
+    
       >
         {selectedTemplate === "template1" ? <ResumeTemplate1 /> : <ResumeTemplate2 />}
       </div>
