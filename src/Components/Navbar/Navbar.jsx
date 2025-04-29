@@ -5,8 +5,8 @@ import "./Navbar.css";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const navigate = useNavigate();
-
+    const navigate = useNavigate();// navigation
+   
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
